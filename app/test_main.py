@@ -56,6 +56,7 @@ def test_invalid_types(
     with pytest.raises(TypeError):
         get_human_age(cat_age, dog_age)
 
+
 @pytest.mark.parametrize(
     "cat_age,dog_age",
     [
@@ -63,7 +64,7 @@ def test_invalid_types(
         (10, -1),
     ],
 )
-def test_negative_ages(
+def test_invalid_types(
     cat_age: int,
     dog_age: int,
 ) -> None:
