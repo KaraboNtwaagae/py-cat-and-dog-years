@@ -53,5 +53,7 @@ def test_invalid_types(
     cat_age: str | int | float | None,
     dog_age: str | int | float | None,
 ) -> None:
+    with pytest.raises(TypeError):
+        get_human_age(cat_age, dog_age)
     with pytest.raises(ValueError):
         get_human_age(cat_age, dog_age)
